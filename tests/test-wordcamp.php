@@ -39,7 +39,8 @@ class WordcampTest extends WP_UnitTestCase {
 
 	// Function to test init wordcamp_filter_content
 	public function test_wordcamp_filter_content(){
-		
+		$content = $this->Wordcamp->wordcamp_filter_content('Hello World');
+		$this->assertEquals('Hello World<p>This is added to the bottom of all post and page content.</p>',$content);
 	}
 
 }

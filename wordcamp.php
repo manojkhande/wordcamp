@@ -43,7 +43,9 @@ class Wordcamp{
 	 * Function to add sample content to each post
 	 */  
 	function wordcamp_filter_content($content) {
-		
+		$new_content = '<p>This is added to the bottom of all post and page content.</p>';
+		$content .= $new_content;	
+		return $content;
 	}
 	
 }
