@@ -31,7 +31,11 @@ class Wordcamp{
 	 * Function to create post type Book
 	 */ 
     function register_book_post_type() {
-	    
+	    $args = array(
+	      'public' => true,
+	      'label'  => 'Books'
+	    );
+	    register_post_type( 'book', $args );
 	}
 
 	/**
